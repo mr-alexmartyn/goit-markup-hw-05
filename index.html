@@ -62,7 +62,9 @@
       <section class="hero">
         <div class="container">
           <h1 class="hero-title">Ефективні рішення для вашого бізнесу</h1>
-          <button type="button" class="button-hero button">Замовити послугу</button>
+          <button type="button " class="button-hero button" data-modal-open>
+            Замовити послугу
+          </button>
         </div>
       </section>
 
@@ -122,13 +124,22 @@
           <h2 class="work-title">Чим ми займаємося</h2>
           <ul class="work-list list">
             <li class="item">
-              <img src="./images/coding.jpg" alt="Людина, яка пише код" width="370" />
+              <div class="work-img-block">
+                <img src="./images/coding.jpg" alt="Людина, яка пише код" width="370" />
+                <div class="work-inform-block">Десктопні додатки</div>
+              </div>
             </li>
             <li class="item">
-              <img src="./images/mobile_dev.jpg" alt="Мобільній розробник" width="370" />
+              <div class="work-img-block">
+                <img src="./images/mobile_dev.jpg" alt="Мобільній розробник" width="370" />
+                <div class="work-inform-block">Мобільні додатки</div>
+              </div>
             </li>
             <li class="item">
-              <img src="./images/gradient_on_tablet.jpg" alt="Градієнт на планшеті" width="370" />
+              <div class="work-img-block">
+                <img src="./images/gradient_on_tablet.jpg" alt="Градієнт на планшеті" width="370" />
+                <div class="work-inform-block">Дизайнерські рішення</div>
+              </div>
             </li>
           </ul>
         </div>
@@ -399,5 +410,25 @@
         </div>
       </div>
     </footer>
+
+    <div class="backdrop is-hidden" data-modal>
+      <div class="modal">
+        <button class="modal-btn" data-modal-close>
+          <svg
+            width="11"
+            height="11"
+            viewBox="0 0 11 11"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M11 1.10786L9.89214 0L5.5 4.39214L1.10786 0L0 1.10786L4.39214 5.5L0 9.89214L1.10786 11L5.5 6.60786L9.89214 11L11 9.89214L6.60786 5.5L11 1.10786Z"
+              fill="black"
+            />
+          </svg>
+        </button>
+      </div>
+    </div>
+    <script src="./js/modal.js"></script>
   </body>
 </html>
