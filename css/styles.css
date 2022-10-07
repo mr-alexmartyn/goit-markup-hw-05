@@ -11,6 +11,9 @@
   --border-color-main: #ececec; /* цвет основных рамок */
   --active-button-background: #188ce8; /* цвет активности главной кнопки */
   --primary-icon-color: #afb1b8; /* Цвет контуров иконок */
+
+  --transition-timing: 250ms;
+  --cubic: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 h1,
@@ -109,6 +112,38 @@ a {
   clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
+}
+
+.header-navigation-link,
+.header-contact-link,
+.footer-adress-mail,
+.footer-adress-tel,
+.footer-adress-map {
+  transition: color var(--transition-timing) var(--cubic);
+}
+
+.button-hero {
+  transition: background-color var(--transition-timing) var(--cubic);
+}
+
+.social-link,
+.footer-social-link {
+  transition: color var(--transition-timing) var(--cubic),
+    background-color var(--transition-timing) var(--cubic);
+}
+
+.our-clients-link {
+  transition: color var(--transition-timing) var(--cubic),
+    border-color var(--transition-timing) var(--cubic);
+}
+
+.button-secondary {
+  transition: color var(--transition-timing) var(--cubic),
+    background-color var(--transition-timing) var(--cubic);
+}
+
+.portfolio-link {
+  transition: box-shadow var(--transition-timing) var(--cubic);
 }
 
 /* ----------------------HEADER----------------------- */
@@ -651,15 +686,15 @@ a {
   display: flex;
   top: 0;
   left: 0;
-  padding: 0 24px;
+  padding: 63px 24px;
   align-items: center;
 
   background-color: rgba(33, 150, 243, 0.9);
   width: 100%;
   height: 100%;
 
-  transform: translateY(101%);
-  /*   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1); */
+  transform: translateY(100%);
+  transition: transform var(--transition-timing) var(--cubic);
 }
 
 .portfolio-overlay-text {
@@ -687,11 +722,14 @@ a {
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.2);
+  opacity: 1;
+  transition: opacity var(--transition-timing) var(--cubic);
 }
 
 .backdrop.is-hidden {
   opacity: 0;
   pointer-events: none;
+  visibility: hidden;
 }
 .modal {
   min-width: 528px;
@@ -700,8 +738,9 @@ a {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%) scale(1);
   padding: 17px 17px;
+  transition: transform var(--transition-timing) var(--cubic);
 }
 
 .modal-btn {
