@@ -139,7 +139,8 @@ a {
 
 .button-secondary {
   transition: color var(--transition-timing) var(--cubic),
-    background-color var(--transition-timing) var(--cubic);
+    background-color var(--transition-timing) var(--cubic),
+    box-shadow var(--transition-timing) var(--cubic);
 }
 
 .portfolio-link {
@@ -755,8 +756,8 @@ a {
   background-color: var(--white-color);
   border: 1px solid rgba(0, 0, 0, 0.1);
   position: absolute;
-  right: 17px;
-  top: 17px;
+  right: 8px;
+  top: 8px;
   cursor: pointer;
 }
 
